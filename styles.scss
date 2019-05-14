@@ -1,0 +1,49 @@
+$break-sm: 480px;
+$break-md: 768px;
+$break-lg: 1024px;
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  background: #edeff0;
+}
+
+#treehouse-badges {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    max-width: 1600px;
+    margin: 0 auto;
+    li {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      margin: 10px;
+      flex-grow: 1;
+      width: 100%;
+      @media screen and (min-width: $break-sm) {
+        width: calc(50% - 60px);
+      }
+      @media screen and (min-width: $break-md) {
+        width: calc(33% - 60px);
+      }
+      @media screen and (min-width: $break-lg) {
+        width: calc(25% - 60px);
+      }
+      box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+      img {
+        width: 100px;
+        margin: 0 auto 20px auto;
+        display: block;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
